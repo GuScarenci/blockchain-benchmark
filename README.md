@@ -53,7 +53,7 @@ cd networks/besu/1node-clique
 4. **Modify docker-compose.yml:** Update the `command` section to include the HTTP RPC flags. Here’s how your `command` section should look:
 ```yaml
 command: 
-	- --genesis-file=/root/genesis.json
+    - --genesis-file=/root/genesis.json
     - --node-private-key-file=/root/.ethereum/keystore/key
     - --min-gas-price=0 
     - --revert-reason-enabled 
@@ -130,10 +130,12 @@ This flag instructs Caliper to execute only the test phase of the standard workf
 - `--caliper-fabric-gateway-enabled`:
 
 Enables the Fabric Gateway for the test, which simplifies interaction between the application and the Hyperledger Fabric network by using the Fabric Gateway API. The Gateway API facilitates communication with the network by automatically managing connectivity aspects like certificates and signatures.
+
 ```bash
 npx caliper launch manager --caliper-benchconfig benchmarks/scenario/simple/config.yaml --caliper-networkconfig networks/besu/1node-clique/networkconfig.json --caliper-workspace .
-This command sets up and runs a Caliper test on a Hyperledger Besu network in a single-node Clique environment. Here’s the detailed breakdown:
 ```
+
+This command sets up and runs a Caliper test on a Hyperledger Besu network in a single-node Clique environment. Here’s the detailed breakdown:
 
 - `npx caliper launch manager`:
 Runs Caliper (without requiring global installation thanks to npx) with the launch manager subcommand, which is the main manager for starting the benchmarking test.
