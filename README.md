@@ -82,7 +82,7 @@ docker-compose up -d
 Now that the Sample **1node-clique network** is running, we need to Deploy a contract on it. Lets start by deploying the ERC-20.sol on it using the Remix IDE. 
 
 6. First install MetaMask and add your Localhost network to it, if you did the steps above in the default way, you should connect to your local network on Metamask like shown below:
-   ![[Pasted image 20241110150754.png]] 
+![Metamask NetworkSetup](Pasted_image_20241110150754.png)
 7. On RemixIDE, connect to your Local Network through Metamask by using **Injected Provider - Metamask** on Enviroment on the "Deploy & run transactions" section.
 8. Copy the ERC-20.sol code that is on the `caliper-benchmarks/src/ethereum/ERC-20` folder in your cloned caliper-benchmark repository and paste it on the RemixIDE file explorer on the src folder, I had to change a few things in the sample code for it to work, I did with the help of Remix correction, and change the compiler, then finally I could compile.
 9. Deploy the ERC-20 on the Network, in this case your Local Network.
